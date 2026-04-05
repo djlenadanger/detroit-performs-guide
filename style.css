@@ -462,7 +462,7 @@ a, button, [role="button"], input, select {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-.play-btn {
+.play-overlay {
   position: absolute;
   inset: 0;
   display: flex;
@@ -471,8 +471,9 @@ a, button, [role="button"], input, select {
   background: rgba(0,0,0,0.3);
   opacity: 0;
   transition: opacity 200ms ease;
+  pointer-events: none;
 }
-.card-thumb:hover .play-btn { opacity: 1; }
+.card-thumb:hover .play-overlay { opacity: 1; }
 .play-circle {
   width: 52px;
   height: 52px;
@@ -484,7 +485,7 @@ a, button, [role="button"], input, select {
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   transition: transform 150ms ease;
 }
-.play-btn:hover .play-circle { transform: scale(1.08); }
+.card-thumb:hover .play-circle { transform: scale(1.08); }
 
 /* Season stripe */
 .season-stripe {
